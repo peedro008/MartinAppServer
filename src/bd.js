@@ -5,10 +5,22 @@ const path = require('path');
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize( "postgres", "postgres", "pesanmene",  {
   host: "http://martinappproduce.cnudap9ls8sm.us-east-2.rds.amazonaws.com",
+  port:5432,
   dialect:'postgres',
   database:"Martinappserver-env",
+  maxConcurrentQueries: 100,
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  dialectOptions: {
+    ssl: {
+        require: true,
+        rejectUnauthorized: false
+    }
+},
+pool: {
+    maxConnections: 5,
+    maxIdleTime: 30
+},
 });
 
 const basename = path.basename(__filename);
