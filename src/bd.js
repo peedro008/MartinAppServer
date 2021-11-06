@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize( "postgres", "postgres", "pesanmene",  {
-  host: "martinappproduce.cnudap9ls8sm.us-east-2.rds.amazonaws.com",
+  host: "http://martinappproduce.cnudap9ls8sm.us-east-2.rds.amazonaws.com",
   dialect:'postgres',
   database:"Martinappserver-env",
   logging: false, // set to console.log to see the raw SQL queries
