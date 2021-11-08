@@ -7,7 +7,7 @@ const admin =require("./data/admin")
 
 
 // Syncing all the models at once.
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   server.listen(8080, async()=>{
     
     //aca cargo los productos y categorias a la base de datos
