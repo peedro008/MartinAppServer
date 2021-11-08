@@ -231,14 +231,6 @@ const updateInfo=async(req,res)=>{
      console.log("Error in updateInfo controller"+ e)
  }
 }
-const anda=async(req,res)=>{
-      
-           res.status(200).send("ANDA PERRO")
-            
-  
-     
-    }
-    
 
 
 module.exports={
@@ -249,6 +241,5 @@ module.exports={
     signupadmin,
     infoGet, 
     infoPost,
-    updateInfo,
-    anda
+    updateInfo
 }
