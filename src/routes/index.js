@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const {products, productsCat, productsSale, updateProduct,postProduct} = require('../controllers/products.js')
-const categories = require('../controllers/categories.js');
+const {categories, category} = require('../controllers/categories.js');
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -14,7 +14,7 @@ const { getOrders, postOrderItems, getUserOrders, getPendingOrders,getOrderId, s
 
 router.post('/login', login);
 
-router.get('/', anda);
+
 
 router.post('/signupadmin', signupadmin);
 
@@ -39,6 +39,8 @@ router.get('/productsCat', productsCat)
 router.get('/productsSale', productsSale)
 
 router.get('/categories',categories)
+
+router.get('/category',category)
 
 router.put("/updateProduct", updateProduct)
 
